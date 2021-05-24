@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="css.css">
+		<title>youplay</title>
+		<base target="_blank">
+	</head>
+	<body>
+		<!-- Шапка страницы -->
+		<header>
+			<div class='sign'>
+				<img src="images/RZ.png"/>
+			</div>
+			<div class='Name'>
+				Схемотехника
+			</div>
+			
+			<ul class = "menu">
+				<li><a href = "index.html">Главная</a></li>
+				<li><a href = "info2.html">Сведения</a></li>
+				<li><a href = "lists.html">Списки и таблицы</a></li>
+				<li><a href = "plaintext.html">plaintext</a></li>
+				
+			</ul>
+			
+		</header>
+		<!-- Определение -->
+		<div class='defin block'>
+			<div>
+				<p>Схемоте́хника — научно-техническое направление, занимающееся проектированием, созданием и отладкой (синтезом и анализом) электронных схем и устройств различного назначения.</p>
+			</div>
+			
+		</div>
+		<!-- Описание -->
+		<div class='Desc block'>
+			<div>
+				<p>Понятие схемотехника применимо к широкому кругу электронных устройств, от сложных систем до отдельных транзисторов внутри интегральной схемы. При этом, реализация простых задач вполне по плечу и одному человеку без дополнительной помощи. Для решения сложных проблем необходим системный подход, компьютерное моделирование и привлечение специальных инженерных команд. Однако в любом случае, схемотехника на практике занимает промежуточное положение между возникновением идеи и производством готовой электронной схемы. Её основной задачей является разработка структур электронных схем, обеспечивающих выполнение заданных функций, а также расчёт параметров входящих в них элементов.</p>
+
+				<p>Необходимо также отметить, что грамотная схемотехника подразумевает баланс экономических и технических показателей. Негативным может стать как недостаток средств на проектирование, так и их переизбыток. Важно в ходе всех этапов работ осуществлять оценку их экономической эффективности.</p>
+
+				<p>Конечный результат схемотехнических работ должен отвечать принципам промышленного дизайна.</p>
+
+				<p>Схемотехнику можно разделить на аналоговую, цифровую и аналого-цифровую.</p>
+			</div>
+			<div>
+				<a href = "info.html">Больше можно узнать здесь...</a>
+			</div>
+		</div>
+		<!-- Картинка -->
+		<div class='image block'>
+			<div>
+				<p>Картинка</p>
+			</div>
+			<div>
+				<p>Ссылка ны другую страницу + сама картинка это ссылка</p>
+			</div>
+		</div>
+		<!-- Видео -->
+		<div class='video block'>
+			<div>
+				<p>Видео</p>
+			</div>
+			<div>
+				<p>Ссылка ны другую страницу</p>
+			</div>
+		</div>
+		<div class='link block'>
+			<div>
+				<p>Ссылки</p>
+			</div>
+		</div>
+		<div class='link2 block'>
+			<div>
+				<p>Ссылки на создателя</p>
+			</div>
+		</div>
+		<div><canvas id="myCanvas" width="350" height="250"
+                style="background-color:#eee; border: 1px solid #ccc; margin:10px;">
+            Ваш браузер не поддерживает Canvas
+        </canvas></div>
+
+		<script>
+            var canvas = document.getElementById("myCanvas"), 
+                context = canvas.getContext("2d"),
+                w = canvas.width,
+                h=canvas.height;
+                 
+            var mouse = { x:0, y:0};
+            var draw = false;
+             
+            canvas.addEventListener("mousedown", function(e){
+                 
+                mouse.x = e.pageX - this.offsetLeft;
+                mouse.y = e.pageY - this.offsetTop;
+                draw = true;
+                context.beginPath();
+                context.moveTo(mouse.x, mouse.y);
+            });
+            canvas.addEventListener("mousemove", function(e){
+                 
+                if(draw==true){
+                 
+                    mouse.x = e.pageX - this.offsetLeft;
+                    mouse.y = e.pageY - this.offsetTop;
+                    context.lineTo(mouse.x, mouse.y);
+                    context.stroke();
+                }
+            });
+            canvas.addEventListener("mouseup", function(e){
+                 
+                mouse.x = e.pageX - this.offsetLeft;
+                mouse.y = e.pageY - this.offsetTop;
+                context.lineTo(mouse.x, mouse.y);
+                context.stroke();
+                context.closePath();
+                draw = false;
+            });
+        </script>
+		<marquee>Уиииииииииииииииииииииииииииииииииииииииииииииииииииии...</marquee>
+	</body>
+		
+</html>	
